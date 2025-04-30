@@ -1,14 +1,13 @@
-// src/components/VideoPlayer.jsthunder
 import React from 'react';
 import YouTube from 'react-youtube';
 
 const VideoPlayer = ({ video, onEnd }) => {
   if (!video) return null;
 
-  const videoId = video.id.videoId || video.id; // fallback if passed directly
+  const videoId = video.id.videoId || video.id;
 
   const opts = {
-    height: '400',
+    height: '900', // Increased height
     width: '100%',
     playerVars: {
       autoplay: 1,
@@ -16,7 +15,7 @@ const VideoPlayer = ({ video, onEnd }) => {
   };
 
   const handleEnd = () => {
-    onEnd(); // Call the function from App when video ends
+    onEnd(); // Trigger the next video
   };
 
   return (

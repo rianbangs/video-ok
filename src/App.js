@@ -125,6 +125,7 @@ const handleCancel = (indexToRemove) => {
       >
         <QueueList
           queue={queue}
+          onPlayNext={handlePlayNext}
           onCancel={handleCancel}
           onPrioritize={handlePrioritize}
         />

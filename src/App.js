@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import youtube from './api/youtube';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
+import ConnectSection from './components/ConnectSection';
 import VideoPlayer from './components/VideoPlayer';
 import QueueList from './components/QueueList';
-import { heIL } from '@mui/material/locale';
+ 
 import './App.css'; 
 
 
@@ -116,8 +117,9 @@ const handleCancel = (indexToRemove) => {
           videos={videos}
           onVideoSelect={handleVideoSelect}
           onReserve={handleReserve}
-        />
+        />        
       </div>
+      <ConnectSection />
     </div>
 
   

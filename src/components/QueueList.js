@@ -90,7 +90,7 @@ const QueueList = ({ queue, onCancel, onPrioritize, currentSong, nextSong }) => 
             }}
           >
             <Typography variant="subtitle2" color="text.secondary">
-              Next:
+              Next Song in Queue:
             </Typography>
             <Box className="marquee">
               <Typography variant="body2" fontWeight="medium">

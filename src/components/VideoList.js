@@ -44,6 +44,7 @@ const VideoList = ({ videos, onVideoSelect, onReserve }) => {
         ))}
       </List>
     </Box>
+    
   );
 };
 

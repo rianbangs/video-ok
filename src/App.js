@@ -4,6 +4,9 @@ import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
 import VideoPlayer from './components/VideoPlayer';
 import QueueList from './components/QueueList';
+import { heIL } from '@mui/material/locale';
+import './App.css'; 
+
 
 const App = () => {
   const [videos, setVideos] = useState([]);
@@ -91,19 +94,32 @@ const handleCancel = (indexToRemove) => {
       }}
     >
       {/* Search Results (left) */}
-      <div style={{ flex: 2, maxHeight: '500px', overflowY: 'auto' }}>
-        {/* Search Bar at the top of the search results */}
-        <div style={{ marginBottom: '10px' }}>
-          <SearchBar onSearch={handleSearch} />
-        </div>
-  
-        {/* Video Results */}
+      <div style={{ flexBasis: '15%' }}>
+      {/* Search Bar (fixed at top) */}
+      <div
+        style={{
+          marginBottom: '10px',
+          padding: '10px',
+          backgroundColor: '#fff',
+          border: '1px solid #ccc',
+          borderRadius: '8px',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+        }}
+      >
+        <SearchBar onSearch={handleSearch} />
+      </div>
+
+
+      {/* Scrollable video list */}
+      <div style={{ maxHeight: '500px', overflowY: 'auto' }}>
         <VideoList
           videos={videos}
           onVideoSelect={handleVideoSelect}
           onReserve={handleReserve}
         />
       </div>
+    </div>
+
   
       {/* Video Player (center) */}
       <div style={{ flex: 3, minWidth: '500px' }}>
@@ -114,7 +130,7 @@ const handleCancel = (indexToRemove) => {
       <div
         style={{
           flex: 1,
-          maxHeight: '500px',
+          maxHeight: '800px',
           overflowY: 'auto',
           border: '1px solid #ccc',
           borderRadius: '8px',
@@ -123,12 +139,15 @@ const handleCancel = (indexToRemove) => {
           minWidth: '200px', 
         }}
       >
-        <QueueList
-          queue={queue}
-          onPlayNext={handlePlayNext}
-          onCancel={handleCancel}
-          onPrioritize={handlePrioritize}
-        />
+        <QueueList  
+        queue={queue}
+        onPlayNext={handlePlayNext}
+        onCancel={handleCancel}
+        onPrioritize={handlePrioritize}
+        currentSong={selectedVideo}
+        nextSong={queue[0]}
+      />
+
       </div>
     </div>
   </div>

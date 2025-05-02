@@ -7,6 +7,8 @@ import VideoPlayer from './components/VideoPlayer';
 import QueueList from './components/QueueList';
  
 import './App.css'; 
+// important note:
+// run npm run build and npm run deploy to update your deployment after making changes. The setup process (e.g., adding gh-pages and configuring package.json) is a one-time task.
 
 
 const App = () => {
@@ -83,7 +85,7 @@ const handleCancel = (indexToRemove) => {
 
   return (
     <div className="App">
-    <h1>🎤 Videoke Sing-Along App</h1>
+    <h1>Rian's 🎤 Video-Ok Sing-Along App 🎤</h1>
   
     {/* Flex container for search results, video, and queue */}
     <div

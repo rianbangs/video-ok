@@ -13,9 +13,9 @@ const VideoPlayer = ({ video, onEnd }) => {
       console.log(`Screen dimensions: ${screenWidth}x${screenHeight}`);
   
       if (screenWidth >= 1366 && screenWidth <= 1920 && screenHeight >= 900) {
-        setPlayerHeight('850');
+        setPlayerHeight('820');
       } else {
-        setPlayerHeight('630');
+        setPlayerHeight('620');
         
       }
     };

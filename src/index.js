@@ -15,7 +15,7 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          fontSize: '10px', // specific font size for buttons
+          fontSize: '6px', // specific font size for buttons
         },
       },
     },

@@ -46,7 +46,7 @@ const VideoPlayer = ({ video, onEnd }) => {
 
   return (
     <div>
-      <h3>{video.snippet.title}{playerHeight}</h3>
+      <h3>{video.snippet.title}</h3>
       <YouTube videoId={videoId} opts={opts} onEnd={handleEnd} />
     </div>
   );

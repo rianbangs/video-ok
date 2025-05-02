@@ -9,7 +9,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 // ✅ Create MUI theme with global font
 const theme = createTheme({
   typography: {
-    fontSize: 14, 
+    fontSize: 5, 
     fontFamily: 'Roboto, sans-serif',
   },
 });

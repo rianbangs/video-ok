@@ -9,13 +9,13 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 // ✅ Create MUI theme with global font
 const theme = createTheme({
   typography: {
-    fontSize: '10px', // base font size for general text
+    fontSize: '14px', // base font size for general text
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          fontSize: '10px', // specific font size for buttons
+          fontSize: '14px', // specific font size for buttons
         },
       },
     },
